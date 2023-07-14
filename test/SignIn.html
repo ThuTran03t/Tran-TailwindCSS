@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Đăng nhập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      width: 50%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      display: block;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #8c7c7c;
+      border-radius: 3px;
+    }
+
+    .container button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #02897B;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      
+    }
+
+    .container button[type="submit"]:hover {
+      background-color: #f9e7d4;
+      color: #060807;
+      
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign In</h2>
+    
+    <form id="loginForm">
+      <div>
+        <label for="fullName">Full name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+      
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var fullName = document.getElementById("fullName").value;
+      var password = document.getElementById("password").value;
+
+      if (fullName && password) {
+        alert("Đăng nhập thành công!");
+      } else {
+        alert("Vui lòng nhập đầy đủ họ tên và mật khẩu!");
+      }
+    });
+  </script>
+</body>
+</html>
