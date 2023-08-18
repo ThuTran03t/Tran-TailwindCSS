@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import AboutMe from './components/AboutMe';
+import './index.css';
 
 function App() {
   return (
@@ -18,9 +20,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <AboutMe/>
     </div>
   );
 }
 
 
 export default App;
+
